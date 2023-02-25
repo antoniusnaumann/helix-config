@@ -1,0 +1,9 @@
+[[language]]
+name = "v"
+language-server = { command = "v", args = ["ls"] }
+
+[[language]]
+name = "rust"
+
+[language.config.checkOnSave]
+command = "clippy"

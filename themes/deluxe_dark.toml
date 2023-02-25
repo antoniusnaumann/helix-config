@@ -1,0 +1,121 @@
+# Author : Antonius Naumann <git@antonius.dev> @antoniusnaumann
+# Delux Dark
+# A cyan & orange theme for helix inspired by iTerm 2's default color scheme. Feel free to contribute
+
+"attribute" = "light-green"
+
+"type" = "light-blue"
+"type.return" = "light-blue"
+"type.parameter" = "light-blue"
+"constructor" = "light-yellow"
+
+"constant" = "light-yellow"
+# "constant.builtin" = {} # .boolean
+"constant.builtin.boolean" = "cyan"
+"constant.character" = "light-yellow"
+"constant.character.escape" = "cyan"
+"constant.numeric" = "light-yellow"
+"string" = "orange"
+"string.regexp" = "cyan"
+"string.special" = { fg = "yellow", modifiers = ["underlined"] } #.path / .url / .symbol
+
+"comment" = "gray" # .line
+# "comment.block" = {} # .documentation
+"variable" = "Gray 120" # .builtin
+"variable.builtin" = { fg = "light-cyan" }
+# "variable.other" = {} # .member
+"variable.other.member" = "light-cyan"
+"label" = "light-red"
+"keyword" = "cyan" # .operator / .directive / .function
+"function" = "very-light-yellow"
+"function.declaration" = "#EFEFEF"
+"function.macro" = "green"
+"function.builtin" = "green"
+"function.special" = "green"
+#"function.declaration.method" = { fg = "lightest", modifiers = ["bold"] } #depends on #4892
+"tag" = "light-blue"
+"special" = "green"
+"namespace" = "light-green"
+
+# used in theming
+# "markup" = {} # .normal / .quote / .raw
+# "markup.normal" = {} # .completion / .hover
+"markup.bold" = {  modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.heading" = { fg = "cyan", modifiers = ["bold"] } # .marker / .1 / .2 / .3 / .4 / .5 / .6
+"markup.list" = "light-magenta" # .unnumbered / .numbered
+"markup.list.numbered" = "cyan"
+"markup.list.unnumbered" = "cyan"
+# "markup.link" = "green"
+"markup.link.url" = { fg = "light-magenta", modifiers = ['italic', 'underlined'] }
+"markup.link.text" = "cyan"
+"markup.link.label" = "light-yellow"
+"markup.quote" = "light-magenta"
+"markup.raw" = "light-magenta"
+"markup.raw.inline" = "cyan" # .completion / .hover
+"markup.raw.block" = "#EB83E2"
+
+"diff.plus" = "green"
+"diff.minus" = "ged"
+"diff.delta" = "blue"
+
+# ui specific
+"ui.background" = { bg = "black" } # .separator
+"ui.statusline" = { fg = "white", bg = "black" } # .inactive / .normal / .insert / .select
+# "ui.statusline.normal" = { fg = "lightest", bg = "darker"}
+# "ui.statusline.insert" = { fg = "lightest", bg = "blue_accent" }
+# "ui.statusline.select" = { fg = "lightest", bg = "orange_accent" }
+
+"ui.cursor" = { modifiers = ["reversed"] } # .insert / .select / .match / .primary
+"ui.cursor.match" = { bg = "Gray 70" } # .insert / .select / .match / .primary
+"ui.selection" = { bg = "Gray 50" } # .primary
+"ui.selection.primary" = { bg = "Gray 80" }
+
+"ui.cursorline" = { bg = "Gray 20" }
+"ui.linenr" = "Gray 70"
+"ui.linenr.selected" = "Gray 110"
+
+"ui.popup" = { fg = "Foreground", bg = "Gray 20" } # .info
+"ui.window" = { fg = "Gray 50" }
+"ui.help" = { fg = "Foreground", bg = "Gray 20" }
+"ui.menu" = { fg = "Foreground", bg = "Gray 20" } # .selected
+"ui.menu.selected" = { fg = "White", bg = "Selection" } # .selected
+# Calculated as #ffffff with 30% opacity
+"ui.menu.scroll" = { fg = "#dfdfdf" }
+
+"ui.text" = "white" # .focus / .info
+"ui.text.focus" = { fg = "Cursor", bg = "Gray 80" }
+
+"ui.virtual" = "Gray 80" # .whitespace
+# "ui.virtual.ruler" = { bg = "darker"}
+
+"hint" = "Gray 80"
+"info" = "#A366C4"
+"warning" = "#FACb66"
+"error" = "#FF5269"
+
+"diagnostic.hint" = { underline = { color = "Gray 80", style = "line" } }
+"diagnostic.info" = { underline = { color = "#A366C4", style = "line" } }
+"diagnostic.warning" = { underline = { color = "#FACB66", style = "line" } }
+"diagnostic.error" = { underline = { color = "#FF5269", style = "line" } }
+
+[palette]
+"Gray 120" = "#d9d9d9"
+"Gray 110" = "#c2c2c2"
+"Gray 100" = "#a0a0a0"
+"Gray 90" = "#898989"
+"Gray 80" = "#767676"
+"Gray 70" = "#5d5d5d"
+"Gray 60" = "#484848"
+"Gray 50" = "#383838"
+"Gray 40" = "#333333"
+"Gray 30" = "#2d2d2d"
+"Gray 20" = "#292929"
+
+"orange" = "#f6c146"
+"very-light-orange" = "#ffdc85"
+"very-light-yellow" = "#f0eca3"
+
+"Selection" = "#b3d7ff"
+"Cursor" = "#fefffe"
