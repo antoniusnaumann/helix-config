@@ -2,3 +2,11 @@ theme = "deluxe_dark"
 
 [editor]
 line-number = "relative"
+
+[keys.normal]
+j = "move_char_left"
+k = "move_line_down"
+l = "move_line_up"
+";" = "move_char_right"
+h = "collapse_selection"
+
