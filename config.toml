@@ -19,7 +19,7 @@ k="move_next_word_end"
 K="move_next_long_word_end"
 
 j="search_next"
-J="search_prev"
+# J="search_prev"
 
 [keys.normal.g]
 n="goto_line_start"
@@ -62,7 +62,7 @@ k="move_next_word_end"
 K="move_next_long_word_end"
 
 j="search_next"
-J="search_prev"
+# J="search_prev"
 
 [keys.normal.z]
 e="scroll_down"
