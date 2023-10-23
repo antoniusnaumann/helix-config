@@ -4,70 +4,93 @@ theme = "deluxe_dark"
 line-number = "relative"
 
 [keys.normal]
-n="move_char_left"
-e="move_line_down"
-i="move_line_up"
-o="move_char_right"
+n = "move_char_left"
+e = "move_line_down"
+i = "move_line_up"
+o = "move_char_right"
 
-h="insert_mode"
-H="insert_at_line_start"
+h = "insert_mode"
+H = "insert_at_line_start"
 
-l="open_below"
-L="open_above"
+l = "open_below"
+L = "open_above"
 
-k="move_next_word_end"
-K="move_next_long_word_end"
+k = "move_next_word_end"
+K = "move_next_long_word_end"
 
-j="search_next"
-# J="search_prev"
+j = "search_next"
+J = "search_prev"
+"C-j" = "join_selections"
+"C-J" = "join_selections_space"
+
+"backspace" = "delete_char_backward"
+"C-backspace" = "delete_char_forward"
+"A-backspace" = "delete_word_backward"
+"C-A-backspace" = "delete_word_forward"
+
+"C-e" = "scroll_down"
+"C-i" = "scroll_up"
+
+# "-s" = ":write-all"
+[keys.normal.z]
+e = "scroll_down"
+i = "scroll_up"
+
+[keys.normal.Z]
+e = "scroll_down"
+i = "scroll_up"
 
 [keys.normal.g]
-n="goto_line_start"
-o="goto_line_end"
+n = "goto_line_start"
+o = "goto_line_end"
+
+[keys.normal.space]
+space = "file_picker"
 
 [keys.normal.space.w]
-n="jump_view_left"
-e="jump_view_down"
-i="jump_view_up"
-o="jump_view_right"
+n = "jump_view_left"
+e = "jump_view_down"
+i = "jump_view_up"
+o = "jump_view_right"
 
 [keys.normal.C-w]
-n="jump_view_left"
-e="jump_view_down"
-E="join_selections"
-"A-E"="join_selections_space"
+n = "jump_view_left"
+e = "jump_view_down"
+E = "join_selections"
+"A-E" = "join_selections_space"
 
-i="jump_view_up"
-I="keep_selections"
-"A-I"="remove_selections"
+i = "jump_view_up"
+I = "keep_selections"
+"A-I" = "remove_selections"
 
-o="jump_view_right"
+o = "jump_view_right"
+
+[keys.normal.d]
+w = "delete_word_forward"
+b = "delete_word_backward"
+n = "kill_to_line_start"
+o = "kill_to_line_end"
+d = "delete_selection_noyank"
+y = "delete_selection"
 
 [keys.insert]
 "A-x" = "normal_mode" # Maps Alt-X to enter normal mode
 
 [keys.select]
-n="move_char_left"
-e="move_line_down"
-i="move_line_up"
-o="move_char_right"
+n = "move_char_left"
+e = "move_line_down"
+i = "move_line_up"
+o = "move_char_right"
 
-l="insert_mode"
-L="insert_at_line_start"
+l = "insert_mode"
+L = "insert_at_line_start"
 
-h="open_below"
-H="open_above"
+h = "open_below"
+H = "open_above"
 
-k="move_next_word_end"
-K="move_next_long_word_end"
+k = "move_next_word_end"
+K = "move_next_long_word_end"
 
-j="search_next"
-# J="search_prev"
+j = "search_next"
+J = "search_prev"
 
-[keys.normal.z]
-e="scroll_down"
-i="scroll_up"
-
-[keys.normal.Z]
-e="scroll_down"
-i="scroll_up"
