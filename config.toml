@@ -34,6 +34,9 @@ J = "search_prev"
 "[" = { b = "goto_previous_buffer" }
 "]" = { b = "goto_next_buffer" }
 
+"C" = "toggle_comments"
+"C-c" = "copy_selection_on_next_line"
+"C-C" = "copy_selection_on_prev_line"
 # "-s" = ":write-all"
 [keys.normal.z]
 e = "scroll_down"
