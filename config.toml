@@ -2,10 +2,26 @@ theme = "deluxe_dark"
 
 [editor]
 line-number = "relative"
+# show open buffers: bufferline = "multiple"
+
+[editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "VISUAL"
+center = ["workspace-diagnostics"]
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.indent-guides]
+render = true
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
+
+[editor.soft-wrap]
+enable = true
 
 [keys.normal]
 # Colemak movements and remap of conflicted keys
