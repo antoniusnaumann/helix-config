@@ -2,6 +2,12 @@
 # Delux Dark
 # A cyan & orange theme for helix inspired by iTerm 2's default color scheme. Feel free to contribute
 
+# Jump Mode colors
+"ui.virtual.jump.single" = { fg = "#ffcc66", modifiers = ["bold"] }
+"ui.virtual.jump.multi.first" = { fg = "#00dfff", modifiers = ["bold"] }
+"ui.virtual.jump.multi.rest" = "#2b8db3"
+"ui.virtual.jump.dim" = "#666666"
+
 "attribute" = "light-green"
 
 "type" = "light-blue"
@@ -63,9 +69,9 @@
 # ui specific
 "ui.background" = { bg = "black" } # .separator
 "ui.statusline" = { fg = "white", bg = "black" } # .inactive / .normal / .insert / .select
-# "ui.statusline.normal" = { fg = "lightest", bg = "darker"}
-# "ui.statusline.insert" = { fg = "lightest", bg = "blue_accent" }
-# "ui.statusline.select" = { fg = "lightest", bg = "orange_accent" }
+"ui.statusline.normal" = { fg = "lightest", bg = "darker"}
+"ui.statusline.insert" = { fg = "lightest", bg = "blue_accent" }
+"ui.statusline.select" = { fg = "lightest", bg = "orange_accent" }
 
 "ui.cursor" = { modifiers = ["reversed"] } # .insert / .select / .match / .primary
 "ui.cursor.match" = { bg = "Gray 70" } # .insert / .select / .match / .primary

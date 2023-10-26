@@ -107,6 +107,11 @@ C = "toggle_comments"
 "'" = "select_regex"
 
 # "-s" = ":write-all"
+# Jump Mode keys
+s = "jump_to_str_label"
+S = "jump_to_identifier_label"
+
+# TODO: Remap "Select Regex" keys
 
 [keys.normal.space.z]
 # Colemak movements
@@ -200,3 +205,7 @@ L = "open_above"
 
 j = "search_next"
 J = "search_prev"
+
+# Jump Mode keys
+s = "jump_to_str_label_and_extend_selection"
+S = "jump_to_identifier_label_and_extend_selection"
