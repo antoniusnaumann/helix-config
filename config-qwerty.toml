@@ -1,1 +1,189 @@
-theme = "everblush"
+theme = "deluxe_dark"
+
+[editor]
+line-number = "relative"
+# show open buffers: bufferline = "multiple"
+
+[editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "VISUAL"
+center = ["workspace-diagnostics"]
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.indent-guides]
+render = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+
+[editor.soft-wrap]
+enable = true
+
+[keys.normal]
+i = ["insert_mode", "collapse_selection"]
+a = ["append_mode", "collapse_selection"]
+
+# Search for word under cursor
+"k" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
+"K" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_prev"]
+
+"C-j" = "join_selections"
+"C-J" = "join_selections_space"
+
+# vim-like motions without expanding selection
+# W = ["move_next_word_start", "collapse_selection"]
+# B = ["move_prev_word_start", "collapse_selection"]
+
+# extending movement
+"C-w" = "extend_next_word_start"
+"C-W" = "extend_next_long_word_start"
+"C-b" = "extend_prev_word_start"
+"C-B" = "extend_prev_long_word_start"
+"C-h" = "extend_to_first_nonwhitespace"
+"C-H" = "extend_to_line_start"
+"C-l" = "extend_to_line_end"
+"C-L" = "extend_to_line_end_newline"
+# "C-t" = "extend_till_next_char"
+"C-T" = "extend_till_prev_char"
+"C-f" = "extend_next_char"
+"C-F" = "extend_prev_char"
+
+"<" = "shrink_selection"
+">" = "expand_selection"
+
+# macOS-like deletions
+"backspace" = "delete_char_backward"
+"C-backspace" = "delete_char_forward"
+"A-backspace" = "delete_word_backward"
+"C-A-backspace" = "delete_word_forward"
+"S-backspace" = "delete_selection"
+
+# Tab-indentation
+"tab" = "indent"
+"S-tab" = "unindent"
+
+# Insert mode toggle
+"C-i" = "insert_mode"
+
+# vim-impaired style movement for navigating buffers
+"[" = { b = "goto_previous_buffer", s = "select_prev_sibling" }
+"]" = { b = "goto_next_buffer", s = "select_next_sibling" }
+
+# Use clipboard instead of registers
+y = ["yank_main_selection_to_clipboard", "collapse_selection"]
+"C-p" = "replace_selections_with_clipboard"
+p = "paste_clipboard_after"
+P = "paste_clipboard_before"
+
+# Other remaps
+z = "undo"
+Z = "redo"
+
+u = "switch_to_lowercase"
+U = "switch_to_uppercase"
+"C-u" = "switch_case"
+
+C = "toggle_comments"
+"C-c" = "copy_selection_on_next_line"
+"C-C" = "copy_selection_on_prev_line"
+
+"'" = "select_regex"
+
+# "-s" = ":write-all"
+# Jump Mode keys
+s = "jump_to_str_label"
+S = "jump_to_identifier_label"
+
+# TODO: Remap "Select Regex" keys
+
+[keys.normal.space.z]
+h = "align_view_top"
+j = "scroll_down"
+k = "scroll_up"
+l = "align_view_bottom"
+c = "align_view_center"
+z = "align_view_center"
+
+[keys.normal.g]
+# Colemak movements
+h = "goto_first_nonwhitespace"
+j = "goto_file_start"
+l = "goto_line_end"
+
+I = "goto_implementation"
+
+[keys.normal.space]
+space = "last_picker"
+p = "paste_after"
+P = "paste_before"
+
+[keys.normal.space.w]
+# Colemak movements
+h = "jump_view_left"
+j = "jump_view_down"
+k = "jump_view_up"
+l = "jump_view_right"
+
+[keys.normal.A-w]
+# Colemak movements and remap of conflicted keys
+h = "jump_view_left"
+j = "jump_view_down"
+E = "join_selections"
+"A-E" = "join_selections_space"
+
+i = "jump_view_up"
+I = "keep_selections"
+"A-I" = "remove_selections"
+
+o = "jump_view_right"
+
+[keys.normal.D]
+# vim-like delete mode
+w = "delete_word_forward"
+W = ["move_next_long_word_start", "delete_selection", "collapse_selection", "normal_mode"]
+b = "delete_word_backward"
+B = ["move_prev_word_start", "delete_selection", "collapse_selection", "normal_mode"]
+n = "kill_to_line_start"
+o = "kill_to_line_end"
+x = ["extend_to_line_bounds", "yank_main_selection_to_clipboard", "delete_selection"]
+d = "delete_selection_noyank"
+y = "delete_selection"
+
+[keys.normal.Y]
+# vim-like yanking
+w = ["move_next_word_start", "yank_main_selection_to_clipboard", "collapse_selection", "normal_mode"]
+W = ["move_next_long_word_start", "yank_main_selection_to_clipboard", "collapse_selection", "normal_mode"]
+b = ["move_prev_word_start", "yank_main_selection_to_clipboard", "collapse_selection", "normal_mode"]
+B = ["move_prev_long_word_start", "yank_main_selection_to_clipboard", "collapse_selection", "normal_mode"]
+x = ["extend_to_line_bounds", "yank_main_selection_to_clipboard", "normal_mode", "collapse_selection"]
+y = "yank_main_selection_to_clipboard"
+d = "delete_selection"
+
+[keys.insert]
+# Normal mode toggle
+"C-n" = "normal_mode" 
+
+# macOS-like deletions
+"C-backspace" = "delete_char_forward"
+"A-backspace" = "delete_word_backward"
+"C-A-backspace" = "delete_word_forward"
+
+[keys.select]
+# Colemak movements and remap of conflicted keys
+h = "extend_char_left"
+j = "extend_line_down"
+k = "extend_line_up"
+l = "extend_char_right"
+H = "extend_to_first_nonwhitespace"
+J = "no_op"
+K = "no_op"
+L = "extend_to_line_end"
+
+# Jump Mode keys
+s = "jump_to_str_label_and_extend_selection"
+S = "jump_to_identifier_label_and_extend_selection"
+
