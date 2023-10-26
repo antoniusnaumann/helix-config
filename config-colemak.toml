@@ -67,6 +67,8 @@ J = "search_prev"
 
 "C-e" = "shrink_selection"
 "C-i" = "expand_selection"
+"<" = "shrink_selection"
+">" = "expand_selection"
 
 # macOS-like deletions
 "backspace" = "delete_char_backward"
