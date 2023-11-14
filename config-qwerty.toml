@@ -75,6 +75,7 @@ a = ["append_mode", "collapse_selection"]
 
 # Use clipboard instead of registers
 y = ["yank_main_selection_to_clipboard", "collapse_selection"]
+d = ["yank_main_selection_to_clipboard", "delete_selection"]
 "C-p" = "replace_selections_with_clipboard"
 p = "paste_clipboard_after"
 P = "paste_clipboard_before"
