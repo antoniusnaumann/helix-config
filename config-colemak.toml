@@ -41,7 +41,6 @@ L = "open_above"
 "k" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
 "K" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_prev"]
 
-
 j = "search_next"
 J = "search_prev"
 "C-j" = "join_selections"
@@ -64,6 +63,8 @@ J = "search_prev"
 "C-T" = "extend_till_prev_char"
 "C-f" = "extend_next_char"
 "C-F" = "extend_prev_char"
+"C-p" = "extend_parent_node_end"
+"C-P" = "extend_parent_node_start"
 
 "C-e" = "shrink_selection"
 "C-i" = "expand_selection"
@@ -72,10 +73,10 @@ J = "search_prev"
 
 # macOS-like deletions
 "backspace" = "delete_char_backward"
-"C-backspace" = "delete_char_forward"
+"S-backspace" = "delete_char_forward"
 "A-backspace" = "delete_word_backward"
-"C-A-backspace" = "delete_word_forward"
-"S-backspace" = "delete_selection"
+"S-A-backspace" = "delete_word_forward"
+"C-backspace" = "delete_selection"
 
 # Tab-indentation
 "tab" = "indent"
@@ -90,9 +91,10 @@ J = "search_prev"
 
 # Use clipboard instead of registers
 y = ["yank_main_selection_to_clipboard", "collapse_selection"]
-"C-p" = "replace_selections_with_clipboard"
+d = ["yank_main_selection_to_clipboard", "delete_selection"]
 p = "paste_clipboard_after"
 P = "paste_clipboard_before"
+R = "replace_selections_with_clipboard"
 
 # Other remaps
 z = "undo"
@@ -136,6 +138,10 @@ I = "goto_implementation"
 space = "last_picker"
 p = "paste_after"
 P = "paste_before"
+y = "yank"
+Y = "yank_joined"
+R = "replace_with_yanked"
+
 
 [keys.normal.space.w]
 # Colemak movements
@@ -148,13 +154,7 @@ o = "jump_view_right"
 # Colemak movements and remap of conflicted keys
 n = "jump_view_left"
 e = "jump_view_down"
-E = "join_selections"
-"A-E" = "join_selections_space"
-
 i = "jump_view_up"
-I = "keep_selections"
-"A-I" = "remove_selections"
-
 o = "jump_view_right"
 
 [keys.normal.D]
@@ -177,16 +177,19 @@ b = ["move_prev_word_start", "yank_main_selection_to_clipboard", "collapse_selec
 B = ["move_prev_long_word_start", "yank_main_selection_to_clipboard", "collapse_selection", "normal_mode"]
 x = ["extend_to_line_bounds", "yank_main_selection_to_clipboard", "normal_mode", "collapse_selection"]
 y = "yank_main_selection_to_clipboard"
-d = "delete_selection"
+d = ["yank_main_selection_to_clipboard", "delete_selection"]
+j = "yank_joined_to_clipboard"
 
 [keys.insert]
 # Normal mode toggle
 "C-h" = "normal_mode" 
 
 # macOS-like deletions
-"C-backspace" = "delete_char_forward"
+"backspace" = "delete_char_backward"
+"S-backspace" = "delete_char_forward"
 "A-backspace" = "delete_word_backward"
-"C-A-backspace" = "delete_word_forward"
+"S-A-backspace" = "delete_word_forward"
+"C-backspace" = "delete_selection"
 
 [keys.select]
 # Colemak movements and remap of conflicted keys

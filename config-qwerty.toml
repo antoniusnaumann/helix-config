@@ -28,8 +28,8 @@ i = ["insert_mode", "collapse_selection"]
 a = ["append_mode", "collapse_selection"]
 
 # Search for word under cursor
-"k" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
-"K" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_prev"]
+"e" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
+"E" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_prev"]
 
 "C-j" = "join_selections"
 "C-J" = "join_selections_space"
