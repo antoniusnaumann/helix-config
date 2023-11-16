@@ -71,6 +71,22 @@ J = "search_prev"
 "<" = "shrink_selection"
 ">" = "expand_selection"
 
+# macOS movements
+"A-left" = "move_prev_word_start"
+"A-right" = "move_next_word_end"
+"S-A-left" = "extend_prev_word_start"
+"S-A-right" = "extend_next_word_end"
+"S-up" = "extend_line_up"
+"S-down" = "extend_line_down"
+"C-S-down" = "copy_selection_on_next_line"
+"C-S-up" = "copy_selection_on_prev_line"
+# TODO: Remap cmd in iterm to allow for command shortcuts
+# "M-left" jump to first non whitespace in line
+# "M-right" jump to end of line
+# with shift: extend selection to ...
+# "C-M-left" collapse code
+# "C-M-right" expand code
+
 # macOS-like deletions
 "backspace" = "delete_char_backward"
 "S-backspace" = "delete_char_forward"
@@ -183,6 +199,12 @@ j = "yank_joined_to_clipboard"
 [keys.insert]
 # Normal mode toggle
 "C-h" = "normal_mode" 
+
+# macOS movements
+"A-left" = "move_prev_word_start"
+"A-right" = "move_next_word_end"
+"S-A-left" = "extend_prev_word_start"
+"S-A-right" = "extend_next_word_end"
 
 # macOS-like deletions
 "backspace" = "delete_char_backward"
