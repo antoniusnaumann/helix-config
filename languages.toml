@@ -1,0 +1,10 @@
+[[language]]
+name = "galvan"
+scope = "source.galvan"
+file-types = ["galvan"]
+comment-tokens = "//"
+indent = { tab-width = 4, unit = "    " }
+
+[[grammar]]
+name = "galvan"
+source = { git = "https://github.com/antoniusnaumann/tree-sitter-galvan", rev = "34295d90b6317d16e9911f969462715c5b35edb7" }

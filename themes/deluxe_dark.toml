@@ -1,5 +1,5 @@
 # Author : Antonius Naumann <git@antonius.dev> @antoniusnaumann
-# Delux Dark
+# Deluxe Dark
 # A cyan & orange theme for helix inspired by iTerm 2's default color scheme. Feel free to contribute
 
 # Jump Mode colors
@@ -7,6 +7,7 @@
 "ui.virtual.jump.multi.first" = { fg = "#00dfff", modifiers = ["bold"] }
 "ui.virtual.jump.multi.rest" = "#2b8db3"
 "ui.virtual.jump.dim" = "#666666"
+"ui.virtual.jump-label" = { fg = "#ffcc66", modifiers = ["bold"] }
 
 "attribute" = "light-green"
 
@@ -67,7 +68,7 @@
 "diff.delta" = "blue"
 
 # ui specific
-"ui.background" = { bg = "black" } # .separator
+"ui.background" = { bg = "background" } # .separator
 "ui.statusline" = { fg = "white", bg = "black" } # .inactive / .normal / .insert / .select
 "ui.statusline.normal" = { fg = "lightest", bg = "darker"}
 "ui.statusline.insert" = { fg = "lightest", bg = "blue_accent" }

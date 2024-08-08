@@ -128,9 +128,9 @@ C = "toggle_comments"
 
 # "-s" = ":write-all"
 # Jump Mode keys
-s = "jump_to_str_label"
-S = "jump_to_identifier_label"
+s = "goto_word"
 
+G = "goto_file_end"
 # TODO: Remap "Select Regex" keys
 
 [keys.normal.space.z]
@@ -149,6 +149,12 @@ i = "goto_file_start"
 o = "goto_line_end"
 
 I = "goto_implementation"
+
+[keys.select.g]
+# Colemak movements
+n = "extend_to_first_nonwhitespace"
+# i = "extend_to_file_start"
+o = "extend_to_line_end"
 
 [keys.normal.space]
 space = "last_picker"
@@ -233,6 +239,4 @@ L = "open_above"
 j = "search_next"
 J = "search_prev"
 
-# Jump Mode keys
-s = "jump_to_str_label_and_extend_selection"
-S = "jump_to_identifier_label_and_extend_selection"
+
