@@ -10,6 +10,12 @@ mode.insert = "INSERT"
 mode.select = "VISUAL"
 center = ["workspace-diagnostics"]
 
+# Activate in next helix release
+# [editor.inline-diagnostics]
+# end-of-line-diagnostics = "hint"
+# cursor-line = "warning" # show warnings and errors on the cursorline inline
+# other-lines = "error"
+
 [editor.lsp]
 display-inlay-hints = true
 

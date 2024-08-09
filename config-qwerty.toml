@@ -4,6 +4,12 @@ theme = "deluxe_dark"
 line-number = "relative"
 # show open buffers: bufferline = "multiple"
 
+# Activate in next helix release
+# [editor.inline-diagnostics]
+# end-of-line-diagnostics = "hint"
+# cursor-line = "warning" # show warnings and errors on the cursorline inline
+# other-lines = "error"
+
 [editor.statusline]
 mode.normal = "NORMAL"
 mode.insert = "INSERT"

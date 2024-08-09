@@ -7,4 +7,4 @@ indent = { tab-width = 4, unit = "    " }
 
 [[grammar]]
 name = "galvan"
-source = { git = "https://github.com/antoniusnaumann/tree-sitter-galvan", rev = "34295d90b6317d16e9911f969462715c5b35edb7" }
+source = { git = "https://github.com/antoniusnaumann/tree-sitter-galvan", rev = "9c77c8f497e9dfcbc667f94a1b20075a039fbde2" }
