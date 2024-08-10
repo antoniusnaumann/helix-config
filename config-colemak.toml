@@ -36,6 +36,17 @@ e = "move_line_down"
 i = "move_line_up"
 o = "move_char_right"
 
+# Move ten lines up or down on shifted movement key
+E = ["move_line_down", "move_line_down", "move_line_down", "move_line_down", "move_line_down", 
+     "move_line_down", "move_line_down", "move_line_down", "move_line_down", "move_line_down"] 
+
+I = ["move_line_up", "move_line_up", "move_line_up", "move_line_up", "move_line_up", 
+     "move_line_up", "move_line_up", "move_line_up", "move_line_up", "move_line_up"] 
+
+# Mark til end of line / start of line
+N = ["extend_to_line_start"]
+O = ["extend_to_line_end"]
+
 h = ["insert_mode", "collapse_selection"]
 a = ["append_mode", "collapse_selection"]
 H = "insert_at_line_start"
@@ -82,6 +93,8 @@ J = "search_prev"
 "A-right" = "move_next_word_end"
 "S-A-left" = "extend_prev_word_start"
 "S-A-right" = "extend_next_word_end"
+"S-left" = "extend_char_left"
+"S-right" = "extend_char_right"
 "S-up" = "extend_line_up"
 "S-down" = "extend_line_down"
 "C-S-down" = "copy_selection_on_next_line"
