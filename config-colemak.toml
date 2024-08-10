@@ -176,13 +176,14 @@ n = "extend_to_first_nonwhitespace"
 o = "extend_to_line_end"
 
 [keys.normal.space]
-space = "last_picker"
+"," = "last_picker"
+space = "file_picker"
 p = "paste_after"
 P = "paste_before"
 y = "yank"
 Y = "yank_joined"
 R = "replace_with_yanked"
-
+e = ":write-quit-all"
 
 [keys.normal.space.w]
 # Colemak movements

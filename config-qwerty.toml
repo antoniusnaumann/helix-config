@@ -145,7 +145,8 @@ l = "goto_line_end"
 I = "goto_implementation"
 
 [keys.normal.space]
-space = "last_picker"
+"," = "last_picker"
+space = "file_picker"
 p = "paste_after"
 P = "paste_before"
 
