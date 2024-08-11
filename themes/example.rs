@@ -23,6 +23,11 @@ impl<'a, T: Display> ImportantExcerpt<'a, T> {
     }
 }
 
+enum File {
+    Image { path: PathBuf },
+    Text(String)
+}
+
 // Function demonstrating early return and the `?` operator
 fn read_username_from_file() -> Result<String, std::io::Error> {
     let mut f = std::fs::File::open("hello.txt")?;
@@ -32,8 +37,11 @@ fn read_username_from_file() -> Result<String, std::io::Error> {
 }
 
 fn main() {
+    let example = File::Text(String);
+        
     let string1 = String::from("long string is long");
     let string2 = "xyz";
+    let boolean = true,
     let result = longest(string1.as_str(), string2);
     println!("The longest string is {}", result);
 

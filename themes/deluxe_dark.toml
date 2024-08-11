@@ -16,17 +16,19 @@
 "attribute" = "light-green"
 
 "type" = "light-blue"
+"type.builtin" = { fg = "light-blue", modifiers = ["italic"] }
 "type.return" = "light-blue"
 "type.parameter" = "light-magenta"
+"type.enum.variant" = "very-light-yellow"
 "constructor" = "light-blue"
 
 "constant" = "light-yellow"
 # "constant.builtin" = {} # .boolean
-"constant.builtin.boolean" = "cyan"
+"constant.builtin.boolean" = "light-yellow"
 "constant.character" = "light-yellow"
-"constant.character.escape" = "cyan"
+"constant.character.escape" = "light-green"
 "constant.numeric" = "light-yellow"
-"string" = "orange"
+"string" = "yellow"
 "string.regexp" = "cyan"
 "string.special" = { fg = "yellow", modifiers = ["underlined"] } #.path / .url / .symbol
 
@@ -48,13 +50,13 @@
 
 "function" = "very-light-yellow"
 "function.declaration" = "#EFEFEF"
-"function.macro" = "light-cyan"
+"function.macro" = { fg = "light-cyan", modifiers = ["italic"] }
 "function.builtin" = "light-cyan"
 "function.special" = "light-cyan"
 #"function.declaration.method" = { fg = "lightest", modifiers = ["bold"] } #depends on #4892
 "tag" = "light-blue"
 "special" = "light-magenta"
-"namespace" = { fg = "Gray 110", modifiers = ["italic"] }
+"namespace" = { fg = "Gray 110" }
 
 # used in theming
 # "markup" = {} # .normal / .quote / .raw
@@ -111,12 +113,12 @@
 
 "hint" = "cyan"
 "info" = "blue"
-"warning" = "yellow"
+"warning" = "light-yellow"
 "error" = "red"
 
 "diagnostic.hint" = { underline = { color = "cyan", style = "line" } }
 "diagnostic.info" = { underline = { color = "blue", style = "line" } }
-"diagnostic.warning" = { underline = { color = "yellow", style = "line" } }
+"diagnostic.warning" = { underline = { color = "light-yellow", style = "line" } }
 "diagnostic.error" = { underline = { color = "red", style = "line" } }
 
 [palette]
@@ -132,8 +134,7 @@
 "Gray 30" = "#2d2d2d"
 "Gray 20" = "#292929"
 
-"orange" = "#f6c146"
-"very-light-orange" = "#ffdc85"
+"very-light-orange" = "#edc86d"
 "very-light-yellow" = "#f0eca3"
 
 "Selection" = "#b3d7ff"
