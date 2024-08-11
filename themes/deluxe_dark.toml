@@ -2,19 +2,23 @@
 # Deluxe Dark
 # A cyan & orange theme for helix inspired by iTerm 2's default color scheme. Feel free to contribute
 
+# Primary Color: light-cyan
+# Secondary Color: orange
+# Highlight Text: very-light-yellow
+# Accent Color: light-blue
+# Special Accent Color: light-green (do not use for regular text)
+#
+# General Philosophy: light colors for text, normal colors for UI elements. Configure your terminal accordingly!
+
 # Jump Mode colors
-"ui.virtual.jump.single" = { fg = "#ffcc66", modifiers = ["bold"] }
-"ui.virtual.jump.multi.first" = { fg = "#00dfff", modifiers = ["bold"] }
-"ui.virtual.jump.multi.rest" = "#2b8db3"
-"ui.virtual.jump.dim" = "#666666"
-"ui.virtual.jump-label" = { fg = "#ffcc66", modifiers = ["bold"] }
+"ui.virtual.jump-label" = { fg = "light-green", modifiers = ["bold"] }
 
 "attribute" = "light-green"
 
 "type" = "light-blue"
 "type.return" = "light-blue"
-"type.parameter" = "light-blue"
-"constructor" = "light-yellow"
+"type.parameter" = "light-magenta"
+"constructor" = "light-blue"
 
 "constant" = "light-yellow"
 # "constant.builtin" = {} # .boolean
@@ -28,21 +32,29 @@
 
 "comment" = "gray" # .line
 # "comment.block" = {} # .documentation
-"variable" = "Gray 120" # .builtin
-"variable.builtin" = { fg = "light-cyan" }
-# "variable.other" = {} # .member
-"variable.other.member" = "light-cyan"
-"label" = "light-red"
-"keyword" = "cyan" # .operator / .directive / .function
+"variable" = "Gray 120" 
+"variable.builtin" = "light-cyan"
+"variable.parameter" = "very-light-orange"
+"variable.other.member" = "very-light-yellow"
+"label" = { fg = "light-magenta", modifiers = ["italic"] }
+
+"keyword" = "light-cyan" # .operator / .directive / .function
+"keyword.return" = "light-red"
+"keyword.exception" = "light-red"
+
+"operator" = "light-magenta"
+"punctuation.delimiter" = "Gray 100"
+"punctuation.bracket" = "Gray 100"
+
 "function" = "very-light-yellow"
 "function.declaration" = "#EFEFEF"
-"function.macro" = "green"
-"function.builtin" = "green"
-"function.special" = "green"
+"function.macro" = "light-cyan"
+"function.builtin" = "light-cyan"
+"function.special" = "light-cyan"
 #"function.declaration.method" = { fg = "lightest", modifiers = ["bold"] } #depends on #4892
 "tag" = "light-blue"
-"special" = "green"
-"namespace" = "light-green"
+"special" = "light-magenta"
+"namespace" = { fg = "Gray 110", modifiers = ["italic"] }
 
 # used in theming
 # "markup" = {} # .normal / .quote / .raw
@@ -50,17 +62,17 @@
 "markup.bold" = {  modifiers = ["bold"] }
 "markup.italic" = { modifiers = ["italic"] }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
-"markup.heading" = { fg = "cyan", modifiers = ["bold"] } # .marker / .1 / .2 / .3 / .4 / .5 / .6
-"markup.list" = "light-magenta" # .unnumbered / .numbered
-"markup.list.numbered" = "cyan"
-"markup.list.unnumbered" = "cyan"
+"markup.heading" = { fg = "light-cyan", modifiers = ["bold"] } # .marker / .1 / .2 / .3 / .4 / .5 / .6
+"markup.list" = "magenta" # .unnumbered / .numbered
+"markup.list.numbered" = "light-cyan"
+"markup.list.unnumbered" = "light-cyan"
 # "markup.link" = "green"
-"markup.link.url" = { fg = "light-magenta", modifiers = ['italic', 'underlined'] }
-"markup.link.text" = "cyan"
+"markup.link.url" = { fg = "magenta", modifiers = ['italic', 'underlined'] }
+"markup.link.text" = "light-blue"
 "markup.link.label" = "light-yellow"
-"markup.quote" = "light-magenta"
-"markup.raw" = "light-magenta"
-"markup.raw.inline" = "cyan" # .completion / .hover
+"markup.quote" = "magenta"
+"markup.raw" = "magenta"
+"markup.raw.inline" = "light-cyan" # .completion / .hover
 "markup.raw.block" = "#EB83E2"
 
 "diff.plus" = "green"
@@ -97,15 +109,15 @@
 "ui.virtual" = "Gray 80" # .whitespace
 # "ui.virtual.ruler" = { bg = "darker"}
 
-"hint" = "Gray 80"
-"info" = "#A366C4"
-"warning" = "#FACb66"
-"error" = "#FF5269"
+"hint" = "cyan"
+"info" = "blue"
+"warning" = "yellow"
+"error" = "red"
 
-"diagnostic.hint" = { underline = { color = "Gray 80", style = "line" } }
-"diagnostic.info" = { underline = { color = "#A366C4", style = "line" } }
-"diagnostic.warning" = { underline = { color = "#FACB66", style = "line" } }
-"diagnostic.error" = { underline = { color = "#FF5269", style = "line" } }
+"diagnostic.hint" = { underline = { color = "cyan", style = "line" } }
+"diagnostic.info" = { underline = { color = "blue", style = "line" } }
+"diagnostic.warning" = { underline = { color = "yellow", style = "line" } }
+"diagnostic.error" = { underline = { color = "red", style = "line" } }
 
 [palette]
 "Gray 120" = "#d9d9d9"
