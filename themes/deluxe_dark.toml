@@ -36,7 +36,7 @@
 # "comment.block" = {} # .documentation
 "variable" = "Gray 120" 
 "variable.builtin" = "light-cyan"
-"variable.parameter" = "very-light-orange"
+"variable.parameter" = "magenta"
 "variable.other.member" = "very-light-yellow"
 "label" = { fg = "light-magenta", modifiers = ["italic"] }
 

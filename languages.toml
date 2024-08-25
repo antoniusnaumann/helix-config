@@ -5,6 +5,17 @@ file-types = ["galvan"]
 comment-tokens = "//"
 indent = { tab-width = 4, unit = "    " }
 
+[[language]]
+name = "type"
+scope = "source.type"
+file-types = ["ty", "type"]
+comment-tokens = "//"
+indent = { tab-width = 4, unit = "    "}
+
 [[grammar]]
 name = "galvan"
-source = { git = "https://github.com/antoniusnaumann/tree-sitter-galvan", rev = "9c77c8f497e9dfcbc667f94a1b20075a039fbde2" }
+source = { git = "https://github.com/antoniusnaumann/tree-sitter-galvan", rev = "18cc0d198f338c518a41745d87736411081eb1ea" }
+
+[[grammar]]
+name = "type"
+source = { git = "https://github.com/antoniusnaumann/tree-sitter-type", rev = "fd951ad46d771588f0512558d65b2588c84a3785" }
