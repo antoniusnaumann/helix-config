@@ -19,3 +19,8 @@ source = { git = "https://github.com/antoniusnaumann/tree-sitter-galvan", rev = 
 [[grammar]]
 name = "type"
 source = { git = "https://github.com/antoniusnaumann/tree-sitter-type", rev = "fd951ad46d771588f0512558d65b2588c84a3785" }
+
+[[language]]
+name = "verilog"
+scope = "source.verilog"
+file-types = ["vh", "sv", "svh"]
