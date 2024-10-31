@@ -12,6 +12,24 @@ file-types = ["ty", "type"]
 comment-tokens = "//"
 indent = { tab-width = 4, unit = "    "}
 
+[[language]]
+name = "wtf"
+scope = "source.wtf"
+file-types = ["wtf"]
+comment-tokens = "//"
+indent = { tab-width = 4, unit = "    "}
+
+[language-server.moonbit-lsp]
+command = "moonbit-lsp"
+
+[[language]]
+name = "moonbit"
+scope = ""
+file-types = ["mbt"]
+comment-tokens = "//"
+indent = { tab-width = 4, unit = "    "}
+language-servers = ["moonbit-lsp"]
+
 [[grammar]]
 name = "galvan"
 source = { git = "https://github.com/antoniusnaumann/tree-sitter-galvan", rev = "18cc0d198f338c518a41745d87736411081eb1ea" }
@@ -19,6 +37,14 @@ source = { git = "https://github.com/antoniusnaumann/tree-sitter-galvan", rev = 
 [[grammar]]
 name = "type"
 source = { git = "https://github.com/antoniusnaumann/tree-sitter-type", rev = "fd951ad46d771588f0512558d65b2588c84a3785" }
+
+[[grammar]]
+name = "wtf"
+source = { git = "https://github.com/antoniusnaumann/tree-sitter-wtf", rev = "6e8f59318f17a251de5fc957de954308bdf9d2aa" }
+
+[[grammar]]
+name = "moonbit"
+source = { git = "https://github.com/moonbitlang/tree-sitter-moonbit", rev = "f59e7d0d88479bb74505c2bdc82474fb319de05d" }
 
 [[language]]
 name = "verilog"
