@@ -4,17 +4,17 @@ theme = "deluxe_dark"
 line-number = "relative"
 # show open buffers: bufferline = "multiple"
 
-[editor.statusline]
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "VISUAL"
-center = ["workspace-diagnostics"]
-
 # Activate in next helix release
 # [editor.inline-diagnostics]
 # end-of-line-diagnostics = "hint"
 # cursor-line = "warning" # show warnings and errors on the cursorline inline
 # other-lines = "error"
+
+[editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "VISUAL"
+center = ["workspace-diagnostics"]
 
 [editor.lsp]
 display-inlay-hints = true
@@ -30,36 +30,24 @@ normal = "block"
 enable = true
 
 [keys.normal]
-# Colemak movements and remap of conflicted keys
-n = "move_char_left"
-e = "move_line_down"
-i = "move_line_up"
-o = "move_char_right"
-
 # Move ten lines up or down on shifted movement key
-E = ["move_line_down", "move_line_down", "move_line_down", "move_line_down", "move_line_down", 
+J = ["move_line_down", "move_line_down", "move_line_down", "move_line_down", "move_line_down", 
      "move_line_down", "move_line_down", "move_line_down", "move_line_down", "move_line_down"] 
 
-I = ["move_line_up", "move_line_up", "move_line_up", "move_line_up", "move_line_up", 
+K = ["move_line_up", "move_line_up", "move_line_up", "move_line_up", "move_line_up", 
      "move_line_up", "move_line_up", "move_line_up", "move_line_up", "move_line_up"] 
 
 # Mark til end of line / start of line
-N = ["extend_to_line_start"]
-O = ["extend_to_line_end"]
+H = ["extend_to_line_start"]
+L = ["extend_to_line_end"]
 
-h = ["insert_mode", "collapse_selection"]
+i = ["insert_mode", "collapse_selection"]
 a = ["append_mode", "collapse_selection"]
-H = "insert_at_line_start"
-
-l = "open_below"
-L = "open_above"
 
 # Search for word under cursor
-"k" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
-"K" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_prev"]
+"e" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
+"E" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_prev"]
 
-j = "search_next"
-J = "search_prev"
 "C-j" = "join_selections"
 "C-J" = "join_selections_space"
 
@@ -72,19 +60,15 @@ J = "search_prev"
 "C-W" = "extend_next_long_word_start"
 "C-b" = "extend_prev_word_start"
 "C-B" = "extend_prev_long_word_start"
-"C-n" = "extend_to_first_nonwhitespace"
-"C-N" = "extend_to_line_start"
-"C-o" = "extend_to_line_end"
-"C-O" = "extend_to_line_end_newline"
+"C-h" = "extend_to_first_nonwhitespace"
+"C-H" = "extend_to_line_start"
+"C-l" = "extend_to_line_end"
+"C-L" = "extend_to_line_end_newline"
 # "C-t" = "extend_till_next_char"
 "C-T" = "extend_till_prev_char"
 "C-f" = "extend_next_char"
 "C-F" = "extend_prev_char"
-"C-p" = "extend_parent_node_end"
-"C-P" = "extend_parent_node_start"
 
-"C-e" = "shrink_selection"
-"C-i" = "expand_selection"
 "<" = "shrink_selection"
 ">" = "expand_selection"
 
@@ -93,32 +77,24 @@ J = "search_prev"
 "A-right" = "move_next_word_end"
 "S-A-left" = "extend_prev_word_start"
 "S-A-right" = "extend_next_word_end"
-"S-left" = "extend_char_left"
-"S-right" = "extend_char_right"
 "S-up" = "extend_line_up"
 "S-down" = "extend_line_down"
 "C-S-down" = "copy_selection_on_next_line"
 "C-S-up" = "copy_selection_on_prev_line"
-# TODO: Remap cmd in iterm to allow for command shortcuts
-# "M-left" jump to first non whitespace in line
-# "M-right" jump to end of line
-# with shift: extend selection to ...
-# "C-M-left" collapse code
-# "C-M-right" expand code
 
 # macOS-like deletions
 "backspace" = "delete_char_backward"
-"S-backspace" = "delete_char_forward"
+"C-backspace" = "delete_char_forward"
 "A-backspace" = "delete_word_backward"
-"S-A-backspace" = "delete_word_forward"
-"C-backspace" = "delete_selection"
+"C-A-backspace" = "delete_word_forward"
+"S-backspace" = "delete_selection"
 
 # Tab-indentation
 "tab" = "indent"
 "S-tab" = "unindent"
 
 # Insert mode toggle
-"C-h" = "insert_mode"
+"C-i" = "insert_mode"
 
 # vim-impaired style movement for navigating buffers
 "[" = { b = "goto_previous_buffer", s = "select_prev_sibling" }
@@ -127,9 +103,9 @@ J = "search_prev"
 # Use clipboard instead of registers
 y = ["yank_main_selection_to_clipboard", "collapse_selection"]
 d = ["yank_main_selection_to_clipboard", "delete_selection"]
+"C-p" = "replace_selections_with_clipboard"
 p = "paste_clipboard_after"
 P = "paste_clipboard_before"
-R = "replace_selections_with_clipboard"
 
 # Other remaps
 z = "undo"
@@ -150,53 +126,46 @@ C = "toggle_comments"
 s = "goto_word"
 
 G = "goto_file_end"
+
 # TODO: Remap "Select Regex" keys
 
 [keys.normal.space.z]
-# Colemak movements
-n = "align_view_top"
-e = "scroll_down"
-i = "scroll_up"
-o = "align_view_bottom"
+h = "align_view_top"
+j = "scroll_down"
+k = "scroll_up"
+l = "align_view_bottom"
 c = "align_view_center"
 z = "align_view_center"
 
 [keys.normal.g]
-# Colemak movements
-n = "goto_first_nonwhitespace"
-i = "goto_file_start"
-o = "goto_line_end"
+h = "goto_first_nonwhitespace"
+j = "goto_file_start"
+l = "goto_line_end"
 
 I = "goto_implementation"
-
-[keys.select.g]
-# Colemak movements
-n = "extend_to_first_nonwhitespace"
-# i = "extend_to_file_start"
-o = "extend_to_line_end"
 
 [keys.normal.space]
 "," = "last_picker"
 space = "file_picker"
 p = "paste_after"
 P = "paste_before"
-y = "yank"
-Y = "yank_joined"
-R = "replace_with_yanked"
-e = ":write-quit-all"
 
 [keys.normal.space.w]
-# Colemak movements
-n = "jump_view_left"
-e = "jump_view_down"
-i = "jump_view_up"
-o = "jump_view_right"
+h = "jump_view_left"
+j = "jump_view_down"
+k = "jump_view_up"
+l = "jump_view_right"
 
 [keys.normal.A-w]
-# Colemak movements and remap of conflicted keys
-n = "jump_view_left"
-e = "jump_view_down"
+h = "jump_view_left"
+j = "jump_view_down"
+E = "join_selections"
+"A-E" = "join_selections_space"
+
 i = "jump_view_up"
+I = "keep_selections"
+"A-I" = "remove_selections"
+
 o = "jump_view_right"
 
 [keys.normal.D]
@@ -219,44 +188,26 @@ b = ["move_prev_word_start", "yank_main_selection_to_clipboard", "collapse_selec
 B = ["move_prev_long_word_start", "yank_main_selection_to_clipboard", "collapse_selection", "normal_mode"]
 x = ["extend_to_line_bounds", "yank_main_selection_to_clipboard", "normal_mode", "collapse_selection"]
 y = "yank_main_selection_to_clipboard"
-d = ["yank_main_selection_to_clipboard", "delete_selection"]
-j = "yank_joined_to_clipboard"
+d = "delete_selection"
 
 [keys.insert]
 # Normal mode toggle
-"C-h" = "normal_mode" 
-
-# macOS movements
-"A-left" = "move_prev_word_start"
-"A-right" = "move_next_word_end"
-"S-A-left" = "extend_prev_word_start"
-"S-A-right" = "extend_next_word_end"
+"C-n" = "normal_mode" 
 
 # macOS-like deletions
-"backspace" = "delete_char_backward"
-"S-backspace" = "delete_char_forward"
+"C-backspace" = "delete_char_forward"
 "A-backspace" = "delete_word_backward"
-"S-A-backspace" = "delete_word_forward"
-"C-backspace" = "delete_selection"
+"C-A-backspace" = "delete_word_forward"
 
 [keys.select]
 # Colemak movements and remap of conflicted keys
-n = "extend_char_left"
-e = "extend_line_down"
-i = "extend_line_up"
-o = "extend_char_right"
-N = "extend_to_first_nonwhitespace"
-E = "no_op"
-I = "no_op"
-O = "extend_to_line_end"
-
-h = "insert_mode"
-H = "insert_at_line_start"
-
-l = "open_below"
-L = "open_above"
-
-j = "search_next"
-J = "search_prev"
+h = "extend_char_left"
+j = "extend_line_down"
+k = "extend_line_up"
+l = "extend_char_right"
+H = "extend_to_first_nonwhitespace"
+J = "no_op"
+K = "no_op"
+L = "extend_to_line_end"
 
 

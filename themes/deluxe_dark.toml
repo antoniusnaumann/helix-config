@@ -41,8 +41,11 @@
 "label" = { fg = "light-magenta", modifiers = ["italic"] }
 
 "keyword" = "light-cyan" # .operator / .directive / .function
+"keyword.control" = "light-cyan" 
 "keyword.return" = "light-red"
+"keyword.control.return" = "light-red"
 "keyword.exception" = "light-red"
+"keyword.control.exception" = "light-red"
 
 "operator" = "light-magenta"
 "punctuation.delimiter" = "Gray 100"
