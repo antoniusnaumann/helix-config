@@ -40,7 +40,7 @@ source = { git = "https://github.com/antoniusnaumann/tree-sitter-type", rev = "f
 
 [[grammar]]
 name = "wtf"
-source = { git = "https://github.com/antoniusnaumann/tree-sitter-wtf", rev = "b950d5856a1cde4046991473947366495e34c7c0" }
+source = { git = "https://github.com/antoniusnaumann/tree-sitter-wtf", rev = "b8c7f6d4522be465a508100c4d3505bf16fb831a" }
 
 [[grammar]]
 name = "moonbit"
