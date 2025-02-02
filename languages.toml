@@ -19,6 +19,9 @@ file-types = ["wtf"]
 comment-tokens = "//"
 indent = { tab-width = 4, unit = "    "}
 
+[language-server.copilot]
+command = "copilot-node-server"
+
 [language-server.moonbit-lsp]
 command = "moonbit-lsp"
 
@@ -50,3 +53,7 @@ source = { git = "https://github.com/moonbitlang/tree-sitter-moonbit", rev = "f5
 name = "verilog"
 scope = "source.verilog"
 file-types = ["vh", "sv", "svh"]
+
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer", "copilot"]
