@@ -1,4 +1,13 @@
 [[language]]
+name = "verilog"
+scope = "source.verilog"
+file-types = ["vh", "sv", "svh"]
+
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer", "copilot"]
+
+[[language]]
 name = "galvan"
 scope = "source.galvan"
 file-types = ["galvan"]
@@ -18,12 +27,14 @@ scope = "source.wtf"
 file-types = ["wtf"]
 comment-tokens = "//"
 indent = { tab-width = 4, unit = "    "}
+language-servers = ["wtf-lsp"]
 
-[language-server.copilot]
-command = "copilot-node-server"
-
-[language-server.moonbit-lsp]
-command = "moonbit-lsp"
+[[language]]
+name = "goto"
+scope = "source.goto"
+file-types = ["goto"]
+comment-tokens = "//"
+indent = { tab-width = 4, unit = "    "}
 
 [[language]]
 name = "moonbit"
@@ -33,9 +44,22 @@ comment-tokens = "//"
 indent = { tab-width = 4, unit = "    "}
 language-servers = ["moonbit-lsp"]
 
+[language-server.copilot]
+command = "copilot-node-server"
+
+[language-server.moonbit-lsp]
+command = "moonbit-lsp"
+
+[language-server.wtf-lsp]
+command = "wtf-lsp"
+
 [[grammar]]
 name = "galvan"
 source = { git = "https://github.com/antoniusnaumann/tree-sitter-galvan", rev = "18cc0d198f338c518a41745d87736411081eb1ea" }
+
+[[grammar]]
+name = "goto"
+source = { git = "https://github.com/goto-lang/tree-sitter-goto", rev = "785bacaa82546567468f48bbbd5f873d8ba49158"}
 
 [[grammar]]
 name = "type"
@@ -48,12 +72,3 @@ source = { git = "https://github.com/antoniusnaumann/tree-sitter-wtf", rev = "36
 [[grammar]]
 name = "moonbit"
 source = { git = "https://github.com/moonbitlang/tree-sitter-moonbit", rev = "f59e7d0d88479bb74505c2bdc82474fb319de05d" }
-
-[[language]]
-name = "verilog"
-scope = "source.verilog"
-file-types = ["vh", "sv", "svh"]
-
-[[language]]
-name = "rust"
-language-servers = ["rust-analyzer", "copilot"]
