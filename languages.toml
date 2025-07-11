@@ -55,7 +55,7 @@ command = "wtf-lsp"
 
 [[grammar]]
 name = "galvan"
-source = { git = "https://github.com/antoniusnaumann/tree-sitter-galvan", rev = "18cc0d198f338c518a41745d87736411081eb1ea" }
+source = { git = "https://github.com/antoniusnaumann/tree-sitter-galvan", rev = "9ada0825a87cf6eed9728eeef04f866cf72a3e6a" }
 
 [[grammar]]
 name = "goto"
