@@ -4,6 +4,22 @@ scope = "source.verilog"
 file-types = ["vh", "sv", "svh"]
 
 [[language]]
+name = "atom"
+scope = "source.atom"
+file-types = ["atom"]
+auto-format = true
+comment-tokens = "//"
+indent = { tab-width = 4, unit = "    "}
+
+[[language]]
+name = "blitz"
+scope = "source.blitz"
+file-types = ["blitz"]
+auto-format = true
+comment-tokens = "//"
+indent = { tab-width = 4, unit = "    "}
+
+[[language]]
 name = "rust"
 language-servers = ["rust-analyzer", "copilot"]
 
@@ -54,8 +70,16 @@ command = "moonbit-lsp"
 command = "wtf-lsp"
 
 [[grammar]]
+name = "blitz"
+source = { git = "https://github.com/antoniusnaumann/tree-sitter-blitz", rev = "71019175a8fb6ba7dff1e1395bea035278a6f620" }
+
+[[grammar]]
 name = "galvan"
-source = { git = "https://github.com/antoniusnaumann/tree-sitter-galvan", rev = "f8b6609a76baaabed02f6036ed5893b1c9cc2f47" }
+source = { git = "https://github.com/antoniusnaumann/tree-sitter-galvan", rev = "824826b23fa68561489e9b63fbfbb4ce6dd258c7" }
+
+[[grammar]]
+name = "atom"
+source = { git = "https://github.com/antoniusnaumann/tree-sitter-atom", rev = "22afc64a9a742d2ee8a46dc404c3ac5e1df5e07d" }
 
 [[grammar]]
 name = "goto"

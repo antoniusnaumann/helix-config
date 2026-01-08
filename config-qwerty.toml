@@ -25,16 +25,20 @@ normal = "block"
 enable = true
 
 [keys.normal]
+j = "move_char_left"
+k = "move_line_down"
+l = "move_line_up"
+";" = "move_char_right"
 # Move ten lines up or down on shifted movement key
-J = ["move_line_down", "move_line_down", "move_line_down", "move_line_down", "move_line_down", 
+K = ["move_line_down", "move_line_down", "move_line_down", "move_line_down", "move_line_down", 
      "move_line_down", "move_line_down", "move_line_down", "move_line_down", "move_line_down"] 
 
-K = ["move_line_up", "move_line_up", "move_line_up", "move_line_up", "move_line_up", 
+L = ["move_line_up", "move_line_up", "move_line_up", "move_line_up", "move_line_up", 
      "move_line_up", "move_line_up", "move_line_up", "move_line_up", "move_line_up"] 
 
 # Mark til end of line / start of line
-H = ["extend_to_line_start"]
-L = ["extend_to_line_end"]
+J = ["extend_to_line_start"]
+":" = ["extend_to_line_end"]
 
 i = ["insert_mode", "collapse_selection"]
 a = ["append_mode", "collapse_selection"]
@@ -125,17 +129,17 @@ G = "goto_file_end"
 # TODO: Remap "Select Regex" keys
 
 [keys.normal.space.z]
-h = "align_view_top"
-j = "scroll_down"
-k = "scroll_up"
-l = "align_view_bottom"
+j = "align_view_top"
+k = "scroll_down"
+l = "scroll_up"
+";" = "align_view_bottom"
 c = "align_view_center"
 z = "align_view_center"
 
 [keys.normal.g]
-h = "goto_first_nonwhitespace"
-j = "goto_file_start"
-l = "goto_line_end"
+j = "goto_first_nonwhitespace"
+k = "goto_file_start"
+";" = "goto_line_end"
 
 I = "goto_implementation"
 
@@ -146,14 +150,14 @@ p = "paste_after"
 P = "paste_before"
 
 [keys.normal.space.w]
-h = "jump_view_left"
-j = "jump_view_down"
-k = "jump_view_up"
-l = "jump_view_right"
+j = "jump_view_left"
+k = "jump_view_down"
+l = "jump_view_up"
+";" = "jump_view_right"
 
 [keys.normal.A-w]
-h = "jump_view_left"
-j = "jump_view_down"
+j = "jump_view_left"
+k = "jump_view_down"
 E = "join_selections"
 "A-E" = "join_selections_space"
 
@@ -196,13 +200,13 @@ d = "delete_selection"
 
 [keys.select]
 # Colemak movements and remap of conflicted keys
-h = "extend_char_left"
-j = "extend_line_down"
-k = "extend_line_up"
-l = "extend_char_right"
-H = "extend_to_first_nonwhitespace"
-J = "no_op"
+j = "extend_char_left"
+k = "extend_line_down"
+l = "extend_line_up"
+";" = "extend_char_right"
+J = "extend_to_first_nonwhitespace"
 K = "no_op"
-L = "extend_to_line_end"
+L = "no_op"
+":" = "extend_to_line_end"
 
 
