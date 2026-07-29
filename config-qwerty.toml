@@ -38,7 +38,7 @@ L = ["move_line_up", "move_line_up", "move_line_up", "move_line_up", "move_line_
 
 # Mark til end of line / start of line
 J = ["extend_to_line_start"]
-":" = ["extend_to_line_end"]
+H = ["extend_to_line_end"]
 
 i = ["insert_mode", "collapse_selection"]
 a = ["append_mode", "collapse_selection"]
@@ -207,6 +207,6 @@ l = "extend_line_up"
 J = "extend_to_first_nonwhitespace"
 K = "no_op"
 L = "no_op"
-":" = "extend_to_line_end"
+H = "extend_to_line_end"
 
 
