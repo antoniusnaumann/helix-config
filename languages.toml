@@ -26,9 +26,10 @@ language-servers = ["rust-analyzer", "copilot"]
 [[language]]
 name = "galvan"
 scope = "source.galvan"
-file-types = ["galvan"]
+file-types = ["galvan", "gv"]
 comment-tokens = "//"
 indent = { tab-width = 4, unit = "    " }
+language-servers = ["galvan-lsp"]
 
 [[language]]
 name = "type"
@@ -60,6 +61,18 @@ comment-tokens = "//"
 indent = { tab-width = 4, unit = "    "}
 language-servers = ["moonbit-lsp"]
 
+[[language]]
+name = "hydra"
+scope = "source.hydra"
+file-types = ["hy"]
+comment-tokens = "//"
+# Indentation is tabs and purely cosmetic: the parser ignores leading
+# whitespace, and blocks are closed by `end`.
+indent = { tab-width = 4, unit = "\t" }
+# `hydra fmt -` takes the buffer on stdin and prints the canonical form.
+formatter = { command = "hydra", args = ["fmt", "-"] }
+auto-format = true
+
 [language-server.copilot]
 command = "copilot-node-server"
 
@@ -69,13 +82,22 @@ command = "moonbit-lsp"
 [language-server.wtf-lsp]
 command = "wtf-lsp"
 
+[language-server.galvan-lsp]
+command = "galvan-lsp"
+
 [[grammar]]
 name = "blitz"
-source = { git = "https://github.com/antoniusnaumann/tree-sitter-blitz", rev = "71019175a8fb6ba7dff1e1395bea035278a6f620" }
+source = { git = "https://github.com/antoniusnaumann/tree-sitter-blitz", rev = "418febdf02decfba5f01ff52ae4050a3920ed6c6" }
+
+[[grammar]]
+name = "hydra"
+# Local until the repository is pushed; then this becomes
+# source = { git = "https://github.com/antoniusnaumann/tree-sitter-hydra", rev = "…" }
+source = { path = "/Users/anaumann/Development/tree-sitter-hydra" }
 
 [[grammar]]
 name = "galvan"
-source = { git = "https://github.com/antoniusnaumann/tree-sitter-galvan", rev = "824826b23fa68561489e9b63fbfbb4ce6dd258c7" }
+source = { git = "https://github.com/antoniusnaumann/tree-sitter-galvan", rev = "48ef48e90d3ddc8ffd911d322e617cc11d5da598" }
 
 [[grammar]]
 name = "atom"
