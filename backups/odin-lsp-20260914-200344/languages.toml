@@ -118,14 +118,3 @@ source = { git = "https://github.com/antoniusnaumann/tree-sitter-wtf", rev = "36
 [[grammar]]
 name = "moonbit"
 source = { git = "https://github.com/moonbitlang/tree-sitter-moonbit", rev = "f59e7d0d88479bb74505c2bdc82474fb319de05d" }
-
-# Odin language server (installed with Homebrew).
-[language-server.ols]
-command = "/opt/homebrew/bin/ols"
-
-[language-server.ols.config]
-odin_command = "/opt/homebrew/bin/odin"
-enable_document_symbols = true
-enable_hover = true
-enable_references = true
-enable_checker_only_saved = true
