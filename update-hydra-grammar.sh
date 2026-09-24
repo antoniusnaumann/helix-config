@@ -4,9 +4,8 @@ set -euo pipefail
 # Rebuild the Hydra grammar from the local repository and refresh its queries.
 #
 # The grammar is a path source in languages.toml, so there is no revision to
-# bump: regenerating the parser and rebuilding is the whole loop. Once
-# tree-sitter-hydra is pushed, swap the source for a git+rev one and this script
-# grows the same rev-rewriting step update-galvan-grammar.sh has.
+# bump: regenerating the parser and rebuilding is the whole loop. The local
+# checkout is the one pushed to github.com/antoniusnaumann/tree-sitter-hydra.
 
 helix_config_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 grammar_repo="${HYDRA_GRAMMAR_REPO:-/Users/anaumann/Development/tree-sitter-hydra}"

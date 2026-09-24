@@ -91,8 +91,10 @@ source = { git = "https://github.com/antoniusnaumann/tree-sitter-blitz", rev = "
 
 [[grammar]]
 name = "hydra"
-# Local until the repository is pushed; then this becomes
-# source = { git = "https://github.com/antoniusnaumann/tree-sitter-hydra", rev = "…" }
+# A path source on purpose: grammar edits reach helix with one rebuild
+# (update-hydra-grammar.sh) and no rev to bump. The repository is
+# github.com/antoniusnaumann/tree-sitter-hydra, private, so a git source would
+# also need credentials for `hx --grammar fetch`.
 source = { path = "/Users/anaumann/Development/tree-sitter-hydra" }
 
 [[grammar]]
